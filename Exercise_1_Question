@@ -1,0 +1,191 @@
+/**
+ * Practise to write the queries below each requirement section
+ *
+ */
+
+
+--################################################
+-- SECTION 1: GETTING FAMILIAR WITH SIMPLE QUERY
+--################################################
+
+-- Create the temp movies table for test data
+CREATE TABLE #Movies
+(
+	id 				int,
+	title			varchar(50),
+	director		varchar(50),
+	year			int,
+	length_minutes	int
+
+)
+
+INSERT INTO #Movies
+VALUES
+(1, 'Toy Story', 'John Lasseter', 1995, 81)
+(2, 'A Bug's Life', 'John Lasseter', 1998, 95)
+(3, 'Toy Story 2', 'John Lasseter', 1999, 93)
+(4, 'Monsters, Inc.', 'Pete Docter', 2001, 92)
+(5, 'Finding Nemo', 'Andrew Stanton', 2003, 107)
+(6, 'The Incredibles	Brad Bird', '2004	116
+(7, 'Cars', 'John Lasseter', 2006, 117)
+(8, 'Ratatouille', 'Brad Bird', 2007, 115)
+(9, 'WALL-E', 'Andrew Stanton', 2008, 104)
+(10, 'Up', 'Pete Docter', 2009, 101)
+(11, 'Toy Story 3', 'Lee Unkrich', 2010, 103)
+(12, 'Cars 2', 'John Lasseter', 2011, 120)
+(13, 'Brave', 'Brenda Chapman', 2012, 102)
+(14, 'Monsters University', 'Dan Scanlon', 2013, 110)
+
+
+---------------------------------------------
+-- 1. Find the movie with a row id of 6
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 2. Find the movies released in the years between 2000 and 2010
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 3. Find the movies not released in the years between 2000 and 2010
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 4. Find the first 5 Pixar movies and their release year
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 5. Find all the Toy Story movies
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 6. Find all the movies directed by John Lasseter
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 7. Find all the movies (and director) not directed by John Lasseter
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 8. Find all the WALL-* movies
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 9. List all directors of movies (alphabetically), without duplicates
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 10. List the last four movies released (ordered from most recent to least)
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 11. List the first five movies sorted alphabetically
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+-- Drop temp tables after practice
+drop table #Movies
+
+
+--################################################
+-- SECTION 2: REVIEW SIMPLE SELECT QUERIES
+--################################################
+
+-----------------------------------------------
+-- Create the table for test data - Movie Ratings
+CREATE TABLE #Movie_Ratings
+(
+	movie_id		varchar(50),
+	reviewer_id		varchar(50),
+	review_stars	float,
+	num_of_ratings	int
+
+)
+
+INSERT INTO #Movie_Ratings
+VALUES
+
+(1, 9001, 8.40, 263575)
+(2, 9002, 7.90, 20207)
+(3, 9003, 8.30, 202778)
+(4, 9005, NULL, 484746)
+(5, 9006, 8.10,)
+(6, 9007, 3.00, 779489)
+(7, 9008, 7.70, 227235)
+(8, 9009, 8.40,)
+(9, 9010, 6.70, 862618)
+(10, 9001, NULL, 830095)
+(12, 9001, 7.00, 580301)
+(13, 9014, NULL, 609451)
+
+---------------------------------------------
+-- Create the table for test data - Reviewer
+CREATE TABLE #Movie_Ratings
+(
+	reviewer_id		varchar(50),
+	reviewer_name	varchar(50)
+
+)
+
+INSERT INTO #Reviewers
+VALUES
+
+(9001, 'Righty Sock')
+(9002, 'Jack Malvern')
+(9003, 'Flagrant Baronessa')
+(9005, NULL)
+(9006, 'Victor Woeltjen')
+(9007, 'Simon Wright')
+(9008, 'Neal Wruck')
+(9009, 'Paul Monks')
+(9010, 'Mike Salvati')
+(9014, 'Josh Cates')
+
+
+---------------------------------------------
+-- 12. Find the titles of all movies that have no ratings
+---------------------------------------------
+-- TODO: write query for this description above
+
+---------------------------------------------
+-- 13. Find the name of all reviewers who have rated 7 or more stars to their rating
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 14. Find the titles of the movies with ID 5, 7, 11
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 15. Return the name of all reviewers and name of movies together in a single list
+---------------------------------------------
+-- TODO: write query for this description above
+
+
+---------------------------------------------
+-- 15. Find the name of all reviewers who have rated their ratings with a NULL value
+---------------------------------------------
+-- TODO: write query for this description above
